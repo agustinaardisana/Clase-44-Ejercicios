@@ -117,31 +117,68 @@ console.log(crearCuentaRegresiva(5)) // [5, 4, 3, 2, 1, 0]
 
 const nombreUsuario = 'usuario'
 const contrasenia = 'usuario1234'
-const ingresarUsuario = prompt(`Ingrese su nombre de usuario`)
-const ingresarContrasenia = prompt(`Ingrese su contraseña`)
+//const ingresarUsuario = prompt(`Ingrese su nombre de usuario`)
+//const ingresarContrasenia = prompt(`Ingrese su contraseña`)
 let numeroDeIntentos = 0
 
-const multiplesIntentos = () => {
-    while (numeroDeIntentos < 2) {
-        const ingresarUsuario = prompt(`Ingrese su nombre de usuario`)
-        const ingresarContrasenia = prompt(`Ingrese su contraseña`)
-        numeroDeIntentos++
-        validarIngreso()
-    }
-    return alert('Este es un mensaje de error')
-}
+//Solucion 1:
+// const multiplesIntentos = () => {
+//     while (numeroDeIntentos < 2) {
+//         const ingresarUsuario = prompt(`Ingrese su nombre de usuario`)
+//         const ingresarContrasenia = prompt(`Ingrese su contraseña`)
+//         numeroDeIntentos++
+//         validarIngreso()
+//     }
+//     return alert('Este es un mensaje de error')
+// }
 
-const validarIngreso = () => {
+// const validarIngreso = () => {
+//     if (ingresarUsuario === nombreUsuario && ingresarContrasenia === contrasenia) {
+//         alert('Este es un mensaje de bienvenida')
+//     }
+//     else {
+//         multiplesIntentos()
+//         //return alert('Este es un mensaje de error')
+//     }
+// }
+
+// console.log(multiplesIntentos())
+
+//Solucion 2:
+
+// const multiplesIntentos = () => {
+//     const ingresarUsuario = prompt(`Ingrese su nombre de usuario`)
+//     const ingresarContrasenia = prompt(`Ingrese su contraseña`)
+//     if (ingresarUsuario === nombreUsuario && ingresarContrasenia === contrasenia) {
+//         alert('Este es un mensaje de bienvenida')
+//     }
+//     else {
+//         while (numeroDeIntentos < 2) {
+//             const ingresarUsuario = prompt(`Ingrese su nombre de usuario`)
+//             const ingresarContrasenia = prompt(`Ingrese su contraseña`)
+//             numeroDeIntentos++
+
+//             if (ingresarUsuario === nombreUsuario && ingresarContrasenia === contrasenia) {
+//                 alert('Este es un mensaje de bienvenida')
+//                 break
+//             }
+//         }
+//         alert('Este es un mensaje de error')
+//     }
+// }
+// console.log(multiplesIntentos())
+
+//Solucion 3:
+
+while (numeroDeIntentos < 3) {
+    const ingresarUsuario = prompt(`Ingrese su nombre de usuario`)
+    const ingresarContrasenia = prompt(`Ingrese su contraseña`)
+
     if (ingresarUsuario === nombreUsuario && ingresarContrasenia === contrasenia) {
         alert('Este es un mensaje de bienvenida')
+        break
     }
-    else {
-        multiplesIntentos()
-        //return alert('Este es un mensaje de error')
-    }
+
+    numeroDeIntentos++
 }
-
-console.log(multiplesIntentos())
-
-
-
+alert('Este es un mensaje de error')
